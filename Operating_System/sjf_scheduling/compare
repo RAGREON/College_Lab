@@ -1,0 +1,7 @@
+#!/bin/bash
+
+./run && gcc index.c 
+
+./a.exe $1 &
+./program.exe $1 &
+wait

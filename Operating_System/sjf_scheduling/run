@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+
+# Compiler and flags
+CC=gcc
+CFLAGS="-Wall -Wextra -Iinclude"
+
+# Source files
+SRC="main.c include/pcb.c include/queue.c"
+
+# Output binary
+OUT="program"
+
+# Compile
+echo "Compiling..."
+$CC $CFLAGS $SRC -o $OUT
+
+# Run
+echo "Running..."
+./$OUT $1
